@@ -1,6 +1,6 @@
 import EventHub from '../src/index'
 
-const test2=message =>{
+const test1=message =>{
     const eventHub = new EventHub();
 
     // on emit
@@ -14,10 +14,11 @@ const test2=message =>{
     });
 
     eventHub.emit("xxx", ["林志玲结婚了", "言承旭无话可说"]);
+    console.log(message)
 
 }
 
-const test3 = message => {
+const test2 = message => {
     const eventHub = new EventHub();
     let called = false;
     const fn1 = () => {
@@ -32,5 +33,6 @@ const test3 = message => {
 };
 
 
-test3("测试off");
+test1(".on 监听 .emit发布");
+test2("测试off");
 
